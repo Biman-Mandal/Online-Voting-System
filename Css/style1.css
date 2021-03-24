@@ -1,0 +1,62 @@
+
+.Homepage_Login{
+	/*background: red;*/
+	margin-top: 50px !important;
+}
+.Edit-form-control{
+	width: 90%;
+}
+.Edit-form-control:focus {
+  border-color: black;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.edit-form-label{
+	letter-spacing: .8px;
+}
+.Homepage_Vote{
+	/*background: #fff;*/
+	margin-top: 50px !important;
+
+}
+.navVoteSection{
+	width: 500px;
+	margin:0px 0px 10px 0px;
+	justify-content: center;
+	font-weight: bold;
+	color: white;
+	letter-spacing: .4px;
+	border-top: 2px solid red;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;  
+
+}
+.edit-card-title{
+	letter-spacing: .6px;
+	text-align: center;
+	font-weight: bold;
+}
+.edit-card-text{
+	text-align: center;
+}
+.edit-signup-form div{
+	margin: 3px 0px;
+}
+.edit-card img{
+	height: 100px;
+	width: 200px;
+	object-fit: cover;
+	/*border-right: 1px solid black;*/
+}
+.Signup-btn{
+	margin-top: 10px !important;
+}
+
+
+
+.errorValidation{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/**/
