@@ -63,7 +63,7 @@
 		    $mail->Port = '587';
 		    $mail->SMTPSecure = 'tls';
 		    $mail->Username='bimanmofficial@gmail.com';
-		    $mail->Password='BM06459@21';
+		    $mail->Password='';
 		    $mail->setFrom('bimanmofficial@gmail.com');
 		    $mail->addAddress("$Email");
 		    $mail->isHTML(true);
