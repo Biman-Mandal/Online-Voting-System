@@ -1,16 +1,18 @@
 <?php 
-	class DB{
+	class DB
+    {
 		protected $con;
 		public function __construct(){
 	 		ob_start();
 			$this->con=mysqli_connect('localhost','root','', 'OnlineVoting_DB');
 		}
 	}
-	class Helper_Class extends DB{
+	class Helper_Class extends DB
+    {
 		private $table;
 		private $Email;
-		public function insert_data(array $data_array){
-
+		public function insert_data(array $data_array)
+        {
 				$this->table=$data_array['table'];
 				$count=count($data_array[0]);
 		 		$i=1;
@@ -30,17 +32,14 @@
 
 		 		  $sql=$sql.") ".$sql1.")";
 		 		 $run=mysqli_query($this->con,$sql);
-		 		 // exit();
 	 			 return $run;
-					}	
-		
-		
-		
-		public function updateData(array $data){
+		}
+
+		public function updateData(array $data)
+        {
 			$this->table=$data['table'];
 	 		$count=count($data[0]);
 	 		$i=1;
-	 		echo "<br>";
 	 		if (isset($data[0]['token'])) {
 	 			$token=$data[0]['token'];
 	 			$sql="update ".$this->table." set status=1 ";
@@ -61,38 +60,32 @@
 	 			$i++;
 	 		}
 	 		$sql=$sql.$sql1;
-	 		// exit();
 	 		$qry=mysqli_query($this->con,$sql);
 	 		return $qry;
-
 		}
 		
-		public function viewData(array $data){
+		public function viewData(array $data)
+        {
 			$this->table=$data['table'];
  			$sql="select * from ".$this->table;
  			$rs=mysqli_query($this->con,$sql);
  			return $rs;
 		}
 		
-		public function VoteCount($data){
-			// $this->table=
+		public function VoteCount($data)
+        {
 			$sql="select * from votingtable where vote='$data'";
 			$Run=mysqli_query($this->con,$sql);
 			$count=mysqli_num_rows($Run);
 			return $count;
 		}
-		public function ViewDataFetch($data_array){
+
+		public function uniqueData($data_array)
+        {
 			$this->table=$data_array['table'];
-			$data=$data_array['Data'];
-			// print_r($data_array);
-			// die();
+			$data = $data_array['data'];
 			$qry="select * from " .$this->table." where " . $data_array['Column'] ."='$data'";
 			$run=mysqli_query($this->con,$qry);
-			// die();
 			return $run;
 		}
-		
 	}
-
-
- ?>

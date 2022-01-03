@@ -75,7 +75,7 @@ Image
     function activate(){
     setTimeout(function(){ 
        window.location.href = "../index.php";
-     }, 4000);      
+     }, 4000);
     }
   };
 

@@ -28,16 +28,14 @@
   $Email=$_SESSION['Email'];
   $EmailCheckData=[ 'table'=>'profiles',
                'Column'=>'Email',
-                'Data'=> $Email
+                'data'=> $Email
           ];
-  $run=$Obj->ViewDataFetch($EmailCheckData);
+  $run=$Obj->uniqueData($EmailCheckData);
   while ($data=mysqli_fetch_assoc($run)) {
-  
    ?>
 <div class="container Homepage_Container1">
   <div class="row row-cols-0 ">
     <div class="col Homepage_Login">
-      
       <div class="text-center ProfileCard">
         <img src="../Css/Image/Profile.jpg" class="rounded" alt="...">
     </div>
@@ -79,8 +77,6 @@
         <!-- <button type="button" class="btn btn-outline-dark">Update</button> -->
       </div>
     </div>
-    
-
     <!-- Vote -->
      <div class="col  Homepage_Vote HomepageVote111">
      <form action="../Action/voteAction.php" method="post">

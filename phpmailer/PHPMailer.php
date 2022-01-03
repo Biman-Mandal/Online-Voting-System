@@ -2034,7 +2034,9 @@ class PHPMailer
                         $this->AuthType,
                         $this->oauth
                     )) {
-                        throw new Exception($this->lang('authenticate'));
+//                        throw new Exception($this->lang('authenticate'));
+                        setcookie("Data_error","Connection error!! Try After Sometime",time()+10,'/');
+                        header("Location: ../signUpPage.php");
                     }
 
                     return true;
